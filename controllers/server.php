@@ -1,7 +1,7 @@
 <?php
 
 /**
- * MiniUPnP controller.
+ * MiniUPnP daemon controller.
  *
  * @category   Apps
  * @package    MiniUPnP
@@ -30,11 +30,24 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////////
+// B O O T S T R A P
+///////////////////////////////////////////////////////////////////////////////
+
+$bootstrap = getenv('CLEAROS_BOOTSTRAP') ? getenv('CLEAROS_BOOTSTRAP') : '/usr/clearos/framework/shared';
+require_once $bootstrap . '/bootstrap.php';
+
+///////////////////////////////////////////////////////////////////////////////
+// D E P E N D E N C I E S
+///////////////////////////////////////////////////////////////////////////////
+
+require clearos_app_base('base') . '/controllers/daemon.php';
+
+///////////////////////////////////////////////////////////////////////////////
 // C L A S S
 ///////////////////////////////////////////////////////////////////////////////
 
 /**
- * MiniUPnP controller.
+ * MiniUPnP daemon controller.
  *
  * @category   Apps
  * @package    MiniUPnP
@@ -45,26 +58,14 @@
  * @link       http://www.clearfoundation.com/docs/developer/apps/miniupnp/
  */
 
-class MiniUPnP extends ClearOS_Controller
+class Server extends Daemon
 {
     /**
-     * MiniUPnP base controller.
-     *
-     * @return view
+     * MiniUPnP daemon constructor.
      */
 
-    function index()
+    function __construct()
     {
-        // Load libraries
-        //---------------
-
-        $this->lang->load('miniupnp');
-
-        // Load views
-        //-----------
-
-        $views = array('miniupnp/server', 'miniupnp/settings');
-
-        $this->page->view_controllers($views, lang('miniupnp_app_name'));
+        parent::__construct('miniupnpd', 'miniupnp');
     }
 }
