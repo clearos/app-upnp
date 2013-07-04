@@ -3,9 +3,9 @@
 /**
  * UPnP server class.
  *
- * @category   Apps
- * @package    UPnP
- * @subpackage Libraries
+ * @category   apps
+ * @package    upnp
+ * @subpackage libraries
  * @author     Peter Baldwin <pbaldwin@clearfoundation.com>
  * @copyright  2013 Peter Baldwin
  * @license    http://www.gnu.org/copyleft/lgpl.html GNU Lesser General Public License version 3 or later
@@ -75,9 +75,9 @@ clearos_load_library('base/Validation_Exception');
 /**
  * MiniUPnP server class.
  *
- * @category   Apps
- * @package    UPnP
- * @subpackage Libraries
+ * @category   apps
+ * @package    upnp
+ * @subpackage libraries
  * @author     Peter Baldwin <pbaldwin@clearfoundation.com>
  * @copyright  2013 Peter Baldwin
  * @license    http://www.gnu.org/copyleft/lgpl.html GNU Lesser General Public License version 3 or later

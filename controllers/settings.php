@@ -3,9 +3,9 @@
 /**
  * UPnP settings controller.
  *
- * @category   Apps
- * @package    UPnP
- * @subpackage Controllers
+ * @category   apps
+ * @package    upnp
+ * @subpackage controllers
  * @author     Peter Baldwin <pbaldwin@clearfoundation.com>
  * @copyright  2013 Peter Baldwin
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 3 or later
@@ -36,9 +36,9 @@
 /**
  * UPnP settings controller.
  *
- * @category   Apps
- * @package    UPnP
- * @subpackage Controllers
+ * @category   apps
+ * @package    upnp
+ * @subpackage controllers
  * @author     Peter Baldwin <pbaldwin@clearfoundation.com>
  * @copyright  2013 Peter Baldwin
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 3 or later
