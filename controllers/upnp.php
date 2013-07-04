@@ -1,15 +1,15 @@
 <?php
 
 /**
- * MiniUPnP controller.
+ * UPnP controller.
  *
  * @category   Apps
- * @package    MiniUPnP
+ * @package    UPnP
  * @subpackage Controllers
  * @author     Peter Baldwin <pbaldwin@clearfoundation.com>
  * @copyright  2013 Peter Baldwin
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 3 or later
- * @link       http://www.clearfoundation.com/docs/developer/apps/miniupnp/
+ * @link       http://www.clearfoundation.com/docs/developer/apps/upnp/
  */
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -34,21 +34,21 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 /**
- * MiniUPnP controller.
+ * UPnP controller.
  *
  * @category   Apps
- * @package    MiniUPnP
+ * @package    UPnP
  * @subpackage Controllers
  * @author     Peter Baldwin <pbaldwin@clearfoundation.com>
  * @copyright  2013 Peter Baldwin
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 3 or later
- * @link       http://www.clearfoundation.com/docs/developer/apps/miniupnp/
+ * @link       http://www.clearfoundation.com/docs/developer/apps/upnp/
  */
 
-class MiniUPnP extends ClearOS_Controller
+class UPnP extends ClearOS_Controller
 {
     /**
-     * MiniUPnP base controller.
+     * UPnP base controller.
      *
      * @return view
      */
@@ -58,13 +58,13 @@ class MiniUPnP extends ClearOS_Controller
         // Load libraries
         //---------------
 
-        $this->lang->load('miniupnp');
+        $this->lang->load('upnp');
 
         // Load views
         //-----------
 
-        $views = array('miniupnp/server', 'miniupnp/settings');
+        $views = array('upnp/server', 'upnp/settings');
 
-        $this->page->view_controllers($views, lang('miniupnp_app_name'));
+        $this->page->view_controllers($views, lang('upnp_app_name'));
     }
 }

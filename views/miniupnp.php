@@ -1,10 +1,10 @@
 <?php
 
 /**
- * MiniUPnP controller.
+ * UPnP controller.
  *
  * @category   Apps
- * @package    MiniUPnP
+ * @package    UPnP
  * @subpackage Controllers
  * @author     Your name <your@e-mail>
  * @copyright  2013 Your name / Company
@@ -15,10 +15,10 @@
 // Load dependencies
 ///////////////////////////////////////////////////////////////////////////////
 
-$this->lang->load('miniupnp');
+$this->lang->load('upnp');
 
 ///////////////////////////////////////////////////////////////////////////////
 // Form
 ///////////////////////////////////////////////////////////////////////////////
 
-echo infobox_highlight(lang('miniupnp_app_name'), '...');
+echo infobox_highlight(lang('upnp_app_name'), '...');

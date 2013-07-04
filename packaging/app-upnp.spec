@@ -1,9 +1,9 @@
 
-Name: app-miniupnp
+Name: app-upnp
 Epoch: 1
 Version: 1.0.0
 Release: 1%{dist}
-Summary: MiniUPnP
+Summary: UPnP
 License: GPLv3
 Group: ClearOS/Apps
 Packager: Peter Baldwin
@@ -15,17 +15,17 @@ Requires: app-base
 Requires: app-network
 
 %description
-MiniUPnP - a description goes here.
+The UPnP app provides both UPnP and NAT-PMP connectivity support.  This feature is used by some software applications including instant messaging.
 
 %package core
-Summary: MiniUPnP - Core
+Summary: UPnP - Core
 License: LGPLv3
 Group: ClearOS/Libraries
 Requires: app-base-core
 Requires: miniupnpd
 
 %description core
-MiniUPnP - a description goes here.
+The UPnP app provides both UPnP and NAT-PMP connectivity support.  This feature is used by some software applications including instant messaging.
 
 This package provides the core API and libraries.
 
@@ -34,54 +34,54 @@ This package provides the core API and libraries.
 %build
 
 %install
-mkdir -p -m 755 %{buildroot}/usr/clearos/apps/miniupnp
-cp -r * %{buildroot}/usr/clearos/apps/miniupnp/
+mkdir -p -m 755 %{buildroot}/usr/clearos/apps/upnp
+cp -r * %{buildroot}/usr/clearos/apps/upnp/
 
-install -d -m 0755 %{buildroot}/var/clearos/miniupnp
-install -d -m 0755 %{buildroot}/var/clearos/miniupnp/backup
+install -d -m 0755 %{buildroot}/var/clearos/upnp
+install -d -m 0755 %{buildroot}/var/clearos/upnp/backup
 install -D -m 0644 packaging/miniupnpd.php %{buildroot}/var/clearos/base/daemon/miniupnpd.php
 
 %post
-logger -p local6.notice -t installer 'app-miniupnp - installing'
+logger -p local6.notice -t installer 'app-upnp - installing'
 
 %post core
-logger -p local6.notice -t installer 'app-miniupnp-core - installing'
+logger -p local6.notice -t installer 'app-upnp-core - installing'
 
 if [ $1 -eq 1 ]; then
-    [ -x /usr/clearos/apps/miniupnp/deploy/install ] && /usr/clearos/apps/miniupnp/deploy/install
+    [ -x /usr/clearos/apps/upnp/deploy/install ] && /usr/clearos/apps/upnp/deploy/install
 fi
 
-[ -x /usr/clearos/apps/miniupnp/deploy/upgrade ] && /usr/clearos/apps/miniupnp/deploy/upgrade
+[ -x /usr/clearos/apps/upnp/deploy/upgrade ] && /usr/clearos/apps/upnp/deploy/upgrade
 
 exit 0
 
 %preun
 if [ $1 -eq 0 ]; then
-    logger -p local6.notice -t installer 'app-miniupnp - uninstalling'
+    logger -p local6.notice -t installer 'app-upnp - uninstalling'
 fi
 
 %preun core
 if [ $1 -eq 0 ]; then
-    logger -p local6.notice -t installer 'app-miniupnp-core - uninstalling'
-    [ -x /usr/clearos/apps/miniupnp/deploy/uninstall ] && /usr/clearos/apps/miniupnp/deploy/uninstall
+    logger -p local6.notice -t installer 'app-upnp-core - uninstalling'
+    [ -x /usr/clearos/apps/upnp/deploy/uninstall ] && /usr/clearos/apps/upnp/deploy/uninstall
 fi
 
 exit 0
 
 %files
 %defattr(-,root,root)
-/usr/clearos/apps/miniupnp/controllers
-/usr/clearos/apps/miniupnp/htdocs
-/usr/clearos/apps/miniupnp/views
+/usr/clearos/apps/upnp/controllers
+/usr/clearos/apps/upnp/htdocs
+/usr/clearos/apps/upnp/views
 
 %files core
 %defattr(-,root,root)
-%exclude /usr/clearos/apps/miniupnp/packaging
-%exclude /usr/clearos/apps/miniupnp/tests
-%dir /usr/clearos/apps/miniupnp
-%dir /var/clearos/miniupnp
-%dir /var/clearos/miniupnp/backup
-/usr/clearos/apps/miniupnp/deploy
-/usr/clearos/apps/miniupnp/language
-/usr/clearos/apps/miniupnp/libraries
+%exclude /usr/clearos/apps/upnp/packaging
+%exclude /usr/clearos/apps/upnp/tests
+%dir /usr/clearos/apps/upnp
+%dir /var/clearos/upnp
+%dir /var/clearos/upnp/backup
+/usr/clearos/apps/upnp/deploy
+/usr/clearos/apps/upnp/language
+/usr/clearos/apps/upnp/libraries
 /var/clearos/base/daemon/miniupnpd.php

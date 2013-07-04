@@ -4,20 +4,20 @@
 // General information
 /////////////////////////////////////////////////////////////////////////////
 
-$app['basename'] = 'miniupnp';
+$app['basename'] = 'upnp';
 $app['version'] = '1.0.0';
 $app['release'] = '1';
 $app['vendor'] = 'Peter Baldwin';
 $app['packager'] = 'Peter Baldwin';
 $app['license'] = 'GPLv3';
 $app['license_core'] = 'LGPLv3';
-$app['description'] = lang('miniupnp_app_description');
+$app['description'] = lang('upnp_app_description');
 
 /////////////////////////////////////////////////////////////////////////////
 // App name and categories
 /////////////////////////////////////////////////////////////////////////////
 
-$app['name'] = lang('miniupnp_app_name');
+$app['name'] = lang('upnp_app_name');
 $app['category'] = lang('base_category_network');
 $app['subcategory'] = lang('base_subcategory_infrastructure');
 
@@ -25,7 +25,7 @@ $app['subcategory'] = lang('base_subcategory_infrastructure');
 // Controllers
 /////////////////////////////////////////////////////////////////////////////
 
-$app['controllers']['miniupnp']['title'] = $app['name'];
+$app['controllers']['upnp']['title'] = $app['name'];
 $app['controllers']['settings']['title'] = lang('base_settings');
 $app['controllers']['server']['title'] = lang('base_server');
 
@@ -42,8 +42,8 @@ $app['core_requires'] = array(
 );
 
 $app['core_directory_manifest'] = array(
-    '/var/clearos/miniupnp' => array(),
-    '/var/clearos/miniupnp/backup' => array(),
+    '/var/clearos/upnp' => array(),
+    '/var/clearos/upnp/backup' => array(),
 );
 
 $app['core_file_manifest'] = array(
@@ -51,7 +51,7 @@ $app['core_file_manifest'] = array(
 );
 
 $app['delete_dependency'] = array(
-    'app-miniupnp-core',
+    'app-upnp-core',
     'miniupnpd',
 );
 

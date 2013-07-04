@@ -1,15 +1,15 @@
 <?php
 
 /**
- * MiniUPnP settings controller.
+ * UPnP settings controller.
  *
  * @category   Apps
- * @package    MiniUPnP
+ * @package    UPnP
  * @subpackage Controllers
  * @author     Peter Baldwin <pbaldwin@clearfoundation.com>
  * @copyright  2013 Peter Baldwin
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 3 or later
- * @link       http://www.clearfoundation.com/docs/developer/apps/miniupnp/
+ * @link       http://www.clearfoundation.com/docs/developer/apps/upnp/
  */
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -34,15 +34,15 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 /**
- * MiniUPnP settings controller.
+ * UPnP settings controller.
  *
  * @category   Apps
- * @package    MiniUPnP
+ * @package    UPnP
  * @subpackage Controllers
  * @author     Peter Baldwin <pbaldwin@clearfoundation.com>
  * @copyright  2013 Peter Baldwin
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 3 or later
- * @link       http://www.clearfoundation.com/docs/developer/apps/miniupnp/
+ * @link       http://www.clearfoundation.com/docs/developer/apps/upnp/
  */
 
 class Settings extends ClearOS_Controller
@@ -93,14 +93,14 @@ class Settings extends ClearOS_Controller
         // Load dependencies
         //------------------
 
-        $this->lang->load('miniupnp');
-        $this->load->library('miniupnp/MiniUPnP');
+        $this->lang->load('upnp');
+        $this->load->library('upnp/MiniUPnP');
 
         // Set validation rules
         //---------------------
          
-        $this->form_validation->set_policy('nat_pmp', 'miniupnp/MiniUPnP', 'validate_state');
-        $this->form_validation->set_policy('secure_mode', 'miniupnp/MiniUPnP', 'validate_state');
+        $this->form_validation->set_policy('nat_pmp', 'upnp/MiniUPnP', 'validate_state');
+        $this->form_validation->set_policy('secure_mode', 'upnp/MiniUPnP', 'validate_state');
         $form_ok = $this->form_validation->run();
 
         // Handle form submit
@@ -134,6 +134,6 @@ class Settings extends ClearOS_Controller
         // Load views
         //-----------
 
-        $this->page->view_form('miniupnp/settings', $data, lang('base_settings'));
+        $this->page->view_form('upnp/settings', $data, lang('base_settings'));
     }
 }

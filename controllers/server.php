@@ -1,15 +1,15 @@
 <?php
 
 /**
- * MiniUPnP daemon controller.
+ * UPnP daemon controller.
  *
  * @category   Apps
- * @package    MiniUPnP
+ * @package    UPnP
  * @subpackage Controllers
  * @author     Peter Baldwin <pbaldwin@clearfoundation.com>
  * @copyright  2013 Peter Baldwin
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 3 or later
- * @link       http://www.clearfoundation.com/docs/developer/apps/miniupnp/
+ * @link       http://www.clearfoundation.com/docs/developer/apps/upnp/
  */
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -47,25 +47,25 @@ require clearos_app_base('base') . '/controllers/daemon.php';
 ///////////////////////////////////////////////////////////////////////////////
 
 /**
- * MiniUPnP daemon controller.
+ * UPnP daemon controller.
  *
  * @category   Apps
- * @package    MiniUPnP
+ * @package    UPnP
  * @subpackage Controllers
  * @author     Peter Baldwin <pbaldwin@clearfoundation.com>
  * @copyright  2013 Peter Baldwin
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 3 or later
- * @link       http://www.clearfoundation.com/docs/developer/apps/miniupnp/
+ * @link       http://www.clearfoundation.com/docs/developer/apps/upnp/
  */
 
 class Server extends Daemon
 {
     /**
-     * MiniUPnP daemon constructor.
+     * UPnP daemon constructor.
      */
 
     function __construct()
     {
-        parent::__construct('miniupnpd', 'miniupnp');
+        parent::__construct('miniupnpd', 'upnp');
     }
 }

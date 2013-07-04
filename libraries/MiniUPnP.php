@@ -1,15 +1,15 @@
 <?php
 
 /**
- * MiniUPnP server class.
+ * UPnP server class.
  *
  * @category   Apps
- * @package    MiniUPnP
+ * @package    UPnP
  * @subpackage Libraries
  * @author     Peter Baldwin <pbaldwin@clearfoundation.com>
  * @copyright  2013 Peter Baldwin
  * @license    http://www.gnu.org/copyleft/lgpl.html GNU Lesser General Public License version 3 or later
- * @link       http://www.clearfoundation.com/docs/developer/apps/miniupnp/
+ * @link       http://www.clearfoundation.com/docs/developer/apps/upnp/
  */
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -33,7 +33,7 @@
 // N A M E S P A C E
 ///////////////////////////////////////////////////////////////////////////////
 
-namespace clearos\apps\miniupnp;
+namespace clearos\apps\upnp;
 
 ///////////////////////////////////////////////////////////////////////////////
 // B O O T S T R A P
@@ -46,7 +46,7 @@ require_once $bootstrap . '/bootstrap.php';
 // T R A N S L A T I O N S
 ///////////////////////////////////////////////////////////////////////////////
 
-clearos_load_language('miniupnp');
+clearos_load_language('upnp');
 
 ///////////////////////////////////////////////////////////////////////////////
 // D E P E N D E N C I E S
@@ -76,12 +76,12 @@ clearos_load_library('base/Validation_Exception');
  * MiniUPnP server class.
  *
  * @category   Apps
- * @package    MiniUPnP
+ * @package    UPnP
  * @subpackage Libraries
  * @author     Peter Baldwin <pbaldwin@clearfoundation.com>
  * @copyright  2013 Peter Baldwin
  * @license    http://www.gnu.org/copyleft/lgpl.html GNU Lesser General Public License version 3 or later
- * @link       http://www.clearfoundation.com/docs/developer/apps/miniupnp/
+ * @link       http://www.clearfoundation.com/docs/developer/apps/upnp/
  */
 
 class MiniUPnP extends Daemon
